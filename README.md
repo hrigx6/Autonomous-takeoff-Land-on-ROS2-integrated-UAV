@@ -24,8 +24,8 @@ Autonomous-takeoff-Land-on-ROS2-integrated-UAV/
 ├── Test_pymavlink.py        # Script to test pymavlink connection with Pixhawk
 ├── auto_takeoff_land.py     # Script to perform autonomous takeoff, hover, and land
 │
-├── results/                 # (Optional) logs, test results, flight data
-├── images/                  # Setup pictures, connection diagrams
+├── results/                
+├── images/                 
 └── README.md
 ```
 
@@ -38,7 +38,6 @@ Autonomous-takeoff-Land-on-ROS2-integrated-UAV/
 | **Flight Controller** | Pixhawk 2.4.8 (PX4 firmware)                    |
 | **Onboard Computer**  | Raspberry Pi 4B (Ubuntu 22.04, ROS2 Humble)     |
 | **Communication**     | MAVLink protocol via serial/USB                 |
-| **Middleware**        | ROS2 (for integration and higher-level control) |
 
 ---
 
@@ -97,27 +96,3 @@ python auto_takeoff_land.py
 Expected: UAV arms → takes off to target altitude → hovers → lands.
 
 ---
-
-## 📚 Key Learnings
-
-* **ROS2 + pymavlink integration** allows low-level control while keeping ROS2 middleware for autonomy.
-* Direct MAVLink commands (via pymavlink) provide fine-grained access to **arming, mode switching, and position control**.
-* This foundation enables **future autonomous tasks** such as mission planning, object tracking, or swarm coordination.
-
----
-
-## 📜 License
-
-Released under the MIT License — free to use, modify, and distribute.
-
----
-
-## 👤 Author
-
-**Your Name**
-Graduate Student | Robotics & Autonomous Systems
-[LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
-
----
-
-👉 Do you want me to also add a **“Theory Section”** in this README that explains how MAVLink commands (arm, set mode, takeoff, land) actually work under the hood? That could make the repo look even more solid academically and professionally.
